@@ -39,11 +39,8 @@ export default async function doctorAuth(req, res, next) {
     // Attach doctor to req
     req.doctor = doctor;
     next();
-
-  } 
-  
-  catch (err) {
-    console.error("Doctor JWT Verification failed:");
+  } catch (err) {
+    console.error("Doctor JWT Verification failed:", err);
     return res.status(401).json({
       success: false,
       message: "Token invalid or missing or expired",

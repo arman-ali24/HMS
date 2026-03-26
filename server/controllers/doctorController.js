@@ -84,13 +84,23 @@ export async function createDoctor(req, res) {
       });
     }
 
-    let imageURL = body.imageURL || null;
-    let imagePublicId = body.imagePublicId || null;
-    if (req.file?.path) {
-      const uploaded = await uploadToCloudinary(req.file.path, "doctors");
-      imageURL = uploaded?.secure_url || uploaded?.url || imageURL;
-      imagePublicId =
-        uploaded?.public_id || uploaded?.publicId || imagePublicId;
+    // Initialize safely
+    let imageUrl = body.imageUrl ?? null;
+    let imagePublicId = body.imagePublicId ?? null;
+
+    // Upload if file exists
+    if (req.file && req.file.path) {
+      try {
+        const uploaded = await uploadToCloudinary(req.file.path, "doctors");
+
+        if (uploaded) {
+          imageUrl = uploaded.secure_url || uploaded.url || imageUrl;
+          imagePublicId =
+            uploaded.public_id || uploaded.publicId || imagePublicId;
+        }
+      } catch (error) {
+        console.error("Cloudinary upload failed:", error);
+      }
     }
 
     const schedule = parseScheduleInput(body.schedule);
