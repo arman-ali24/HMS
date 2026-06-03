@@ -47,30 +47,26 @@ function normalizeDoctor(doc) {
     doc.avatar ||
     `https://i.pravatar.cc/150?u=${id}`;
 
+  // FIXED - correct field names matching backend response
   const appointments = {
     total:
-      doc.appointments?.total ??
-      doc.totalAppointments ??
       doc.appointmentsTotal ??
+      doc.appointments?.total ??
       0,
 
     completed:
+      doc.appointmentsCompleted ??
       doc.appointments?.completed ??
-      doc.completedAppointments ??
       0,
 
     canceled:
+      doc.appointmentsCanceled ??
       doc.appointments?.canceled ??
-      doc.canceledAppointments ??
       0,
   };
 
-  let earnings = 0;
-
-  if (doc.earnings !== undefined)
-    earnings = safeNumber(doc.earnings, 0);
-  else if (appointments.completed && fee)
-    earnings = fee * safeNumber(appointments.completed, 0);
+  // FIXED - backend already calculates earnings correctly
+  const earnings = safeNumber(doc.earnings, 0);
 
   return {
     id,
@@ -107,9 +103,10 @@ const DashboardPage = () => {
 
         let list = [];
 
+        // NEW - checks `data` first (matches backend response)
         if (Array.isArray(body)) list = body;
-        else if (Array.isArray(body.doctors)) list = body.doctors;
-        else if (Array.isArray(body.data)) list = body.data;
+        else if (Array.isArray(body.data)) list = body.data;    
+        else if (Array.isArray(body.doctors)) list = body.doctors; 
 
         const normalized = list.map((d) => normalizeDoctor(d));
 
