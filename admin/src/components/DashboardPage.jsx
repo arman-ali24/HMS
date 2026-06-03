@@ -47,7 +47,6 @@ function normalizeDoctor(doc) {
     doc.avatar ||
     `https://i.pravatar.cc/150?u=${id}`;
 
-  // FIXED - correct field names matching backend response
   const appointments = {
     total:
       doc.appointmentsTotal ??
@@ -65,7 +64,6 @@ function normalizeDoctor(doc) {
       0,
   };
 
-  // FIXED - backend already calculates earnings correctly
   const earnings = safeNumber(doc.earnings, 0);
 
   return {
