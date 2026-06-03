@@ -1,22 +1,46 @@
-# MediCare 🏥
+<div align="center">
+  <h1>MediCare - Smart Hospital Solution🏥</h1>
+</div>
 
-A modern full-stack healthcare management platform designed to simplify doctor appointments, patient management, and healthcare services with a seamless and responsive user experience.
+# Description
+A scalable healthcare management platform that streamlines appointments, patient workflows, healthcare services, and digital payments within a unified system. Built with role-based access control and modern architecture, it enables efficient healthcare operations through secure and intuitive user experiences.
 
----
+# Features
+## A. Admin Can👨‍💼:
+1. **Manage Doctors**: Add, update, view, and remove doctor profiles, including specialties, experience, consultation fees, and availability schedules.
+2. **Manage Healthcare Services**: Create, edit, organize, and remove medical services while maintaining service details, pricing, and booking availability.
+3. **Appointment & Patient Management**: Monitor all patient appointments, track appointment statuses, manage patient records, and oversee booking activities across the platform.
+4. **Doctor Availability Management**: Configure doctor schedules and consultation slots to ensure accurate appointment allocation and resource utilization.
+5. **Payment & Billing Monitoring**: Track appointment and service payments, monitor transaction records, and oversee billing-related operations.
+6. **Analytics & Dashboard Insights**: Access real-time statistics and operational insights, including appointment trends, doctor performance, service usage, and revenue metrics.
 
-## 🚀 Features
+## B. Patient Can🧑‍🤝‍🧑:
+1. **Secure Account Management**: Register, log in, and manage personal profile information through a secure authentication system.
+2. **Doctor & Service Discovery**: Browse doctors by specialty, view detailed profiles, and explore available healthcare services before booking.
+3. **Online Appointment Booking**: Schedule doctor consultations seamlessly by selecting preferred doctors, dates, and available time slots.
+4. **Healthcare Service Booking**: Book diagnostic tests, medical services, and healthcare packages directly through the platform.
+5. **Secure Online Payments**: Make appointment and service payments securely using Stripe with real-time payment confirmation.
+6. **Booking History & Tracking**: Access complete appointment and service booking history while tracking booking statuses in real time.
+7. **Appointment Management**: Receive booking confirmations and updates, and reschedule or cancel appointments based on availability and platform policies.
 
-- 🔐 Secure Authentication & Authorization
-- 👨‍⚕️ Doctor & Patient Dashboard
-- 📅 Online Appointment Booking
-- 🩺 Doctor Profile Management
-- 💳 Payment Integration
-- 📱 Fully Responsive UI
-- ⚡ Fast & Optimized Performance
-- 🔄 Real-time Data Handling
-- 🌐 RESTful API Architecture
+## C. Doctor Can👨‍⚕️:
+1. **Secure Authentication & Profile Management**: Access a dedicated doctor portal with secure authentication and manage professional profile information.
+2. **Appointment Management**: View assigned appointments, manage schedules, and accept, confirm, reschedule, or cancel patient bookings.
+3. **Availability & Slot Configuration**: Configure consultation availability and manage appointment slots to optimize scheduling efficiency.
+4. **Patient Information Access**: Review patient details, appointment information, and medical history before consultations.
+5. **Appointment Status Updates**: Update appointment progress by marking consultations as completed, canceled, or rescheduled.
+6. **Service Booking Management**: Monitor and manage service-related bookings associated with healthcare consultations.
+7. **Consultation History Tracking**: Access previous appointment records and consultation history for improved patient care and follow-up management.
 
----
+# 📸 ScreenShots
+
+**Admin Portal**
+
+AdminDashboard
+<img src=""/>
+
+
+
 
 # 🛠 Tech Stack
 
