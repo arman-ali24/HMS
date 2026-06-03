@@ -23,7 +23,7 @@ A scalable healthcare management platform that streamlines appointments, patient
 6. **Booking History & Tracking**: Access complete appointment and service booking history while tracking booking statuses in real time.
 7. **Appointment Management**: Receive booking confirmations and updates, and reschedule or cancel appointments based on availability and platform policies.
 
-## B. Doctor Can👨‍⚕️:
+## C. Doctor Can👨‍⚕️:
 1. **Secure Authentication & Profile Management**: Access a dedicated doctor portal with secure authentication and manage professional profile information.
 2. **Appointment Management**: View assigned appointments, manage schedules, and accept, confirm, reschedule, or cancel patient bookings.
 3. **Availability & Slot Configuration**: Configure consultation availability and manage appointment slots to optimize scheduling efficiency.
