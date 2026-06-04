@@ -36,9 +36,27 @@ A scalable healthcare management platform that streamlines appointments, patient
 
 **Admin Portal**
 
-AdminDashboard
-<img src=""/>
+AdminHome
+<img src="screenshots/Admin Panel.png"/>
+DashboardPage
+<img src="screenshots/Admin Dashboard.png"/>
+DoctorPage
+<img src="screenshots/Admin DoctorPage.png"/>
+ServicePage
+<img src="screenshots/Admin ServicePage.png"/>
 
+**Patient Portal**
+
+PatientHome
+<img src="screenshots/Patient Home.png"/>
+DoctorProfile
+<img src="screenshots/Patient DocProfile.png"/>
+AppointmentBooking
+<img src="screenshots/Patient BookAppt.png"/>
+DoctorLoginPage
+<img src="screenshots/Doctor LoginPage.png"/>
+DoctorDashboard
+<img src="screenshots/Doctor Admin.png"/>
 
 
 
