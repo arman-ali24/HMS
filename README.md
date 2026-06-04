@@ -56,9 +56,7 @@ AppointmentBooking
 DoctorLoginPage
 <img src="screenshots/Doctor LoginPage.png"/>
 DoctorDashboard
-<img src="screenshots/Doctor Admin.png"/>
-
-
+<img src="screenshots/Doctor Dashboard.png"/>
 
 # 🛠 Tech Stack
 
