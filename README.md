@@ -75,8 +75,7 @@ DoctorDashboard
 - Mongoose
 
 ## Authentication & Security
-- JWT Authentication
-- Bcrypt.js
+Clerk
 
 ---
 
