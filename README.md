@@ -33,7 +33,6 @@ A scalable healthcare management platform that streamlines appointments, patient
 7. **Consultation History Tracking**: Access previous appointment records and consultation history for improved patient care and follow-up management.
 
 # 📸 ScreenShots
-
 **Admin Portal**
 
 AdminHome
@@ -60,44 +59,54 @@ DoctorDashboard
 
 # 🛠 Tech Stack
 
-## Frontend
-- React.js
-- Tailwind CSS
-- Axios
-- React Router DOM
-
-## Backend
-- Node.js
-- Express.js
-
-## Database
-- MongoDB
-- Mongoose
-
-## Authentication & Security
-Clerk
-
----
+![NodeJS](https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white)
+![Express.js](https://img.shields.io/badge/express.js-%23404d59.svg?style=for-the-badge&logo=express&logoColor=%2361DAFB)
+![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
+![TailwindCSS](https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white)
+![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
+![MongoDB](https://img.shields.io/badge/mongodb-%234ea94b.svg?style=for-the-badge&logo=mongodb&logoColor=white)
+![Clerk](https://img.shields.io/badge/Clerk-6C47FF?style=for-the-badge&logo=clerk&logoColor=white)
+![Stripe](https://img.shields.io/badge/Stripe-635BFF?style=for-the-badge&logo=stripe&logoColor=white)
+![Cloudinary](https://img.shields.io/badge/Cloudinary-3448C5?style=for-the-badge&logo=cloudinary&logoColor=white)
+![Render](https://img.shields.io/badge/Render-46E3B7?style=for-the-badge&logo=render&logoColor=black)
 
 # 📂 Folder Structure
 
 ```bash
 MediCare/
 │
-├── frontend/              # React Frontend
-├── backend/               # Node.js + Express Backend
+├── admin/                    # Admin Panel (React + Tailwind)
+│   ├── src/
+│   │   ├── assets/
+│   │   ├── components/
+│   │   ├── pages/
+│   │   ├── App.jsx/
+│   │   ├── index.css/
+│   │   └── main.jsx
 │
-├── models/                # Database Models
-├── routes/                # API Routes
-├── controllers/           # Business Logic
-├── middleware/            # Custom Middleware
-├── config/                # Configuration Files
-├── utils/                 # Utility Functions
+├── client/                   # Patient Frontend (React + Tailwind)
+│   ├── src/
+│   │   ├── assets/
+│   │   ├── components/
+│   │   ├── doctor/
+│   │   ├── pages/
+│   │   ├── App.jsx/
+│   │   ├── index.css/
+│   │   └── main.jsx
+│       
+├── server/                   # Backend (Node + Express)
+│   ├── config/
+│   ├── controllers/
+│   ├── middlewares/
+│   ├── models/
+│   ├── routes/
+│   ├── utils/
+│   └── server.js
 │
+├── screenshots
 └── README.md
-```
 
----
+```
 
 # ⚙️ Installation & Setup
 
@@ -113,88 +122,80 @@ git clone https://github.com/arman-ali24/MediCare.git
 cd MediCare
 ```
 
----
-
 # 📦 Install Dependencies
 
-## Frontend Setup
+## Admin Panel Setup
 
 ```bash
-cd frontend
+cd admin
+npm install
+```
+
+## Patient Frontend Setup
+
+```bash
+cd client
 npm install
 ```
 
 ## Backend Setup
 
 ```bash
-cd backend
+cd server
 npm install
 ```
 
----
-
 # 🔑 Environment Variables
 
-Create a `.env` file inside the backend folder and add:
+1. Create a `.env` file inside the admin folder and add:
 
 ```env
-PORT=5000
+VITE_CLERK_PUBLISHABLE_KEY=paste_your_key
 
-MONGO_URI=your_mongodb_connection_string
-
-JWT_SECRET=your_jwt_secret
-
-NODE_ENV=development
 ```
+2. Create a `.env` file inside the client folder and add:
 
----
+```env
+VITE_CLERK_PUBLISHABLE_KEY=paste_your_key
+
+```
+3. Create a `.env` file inside the server folder and add:
+
+```env
+CLERK_PUBLISHABLE_KEY=paste_your_key
+CLERK_SECRET_KEY=paste_your_key
+CLOUDINARY_CLOUD_NAME=enter_your_cloudname
+CLOUDINARY_API_KEY=enter_your_apikey
+CLOUDINARY_API_SECRET=enter_your_apisecret
+JWT_SECRET=enter_jwtsecret
+STRIPE_SECRET_KEY=paste_your_key
+FRONTEND_URL=enter_your_url
+
+```
+4. Add your Backend LocalURL in Both Admin and Client folder
 
 # ▶️ Run Project
 
 ## Start Backend Server
 
 ```bash
-cd backend
-npm run dev
+cd server
+npm start
 ```
 
 ## Start Frontend
 
 ```bash
-cd frontend
-npm start
+cd client
+npm run dev
 ```
 
----
+## Start Admin Panel
 
-# 🌐 API Endpoints
-
-| Method | Endpoint | Description |
-|--------|----------|-------------|
-| POST | `/api/auth/register` | Register User |
-| POST | `/api/auth/login` | Login User |
-| GET | `/api/doctors` | Get All Doctors |
-| GET | `/api/doctors/:id` | Get Single Doctor |
-| POST | `/api/appointments` | Book Appointment |
-| GET | `/api/appointments` | Get User Appointments |
-
----
-
-# 📸 Screenshots
-
-## Homepage
-
-```md
-![Homepage](./screenshots/home.png)
+```bash
+cd admin
+npm run dev
 ```
-
-## Dashboard
-
-```md
-![Dashboard](./screenshots/dashboard.png)
-```
-
----
 
 # 🚀 Future Enhancements
 
@@ -204,18 +205,6 @@ npm start
 - 📊 Admin Analytics Dashboard
 - 💊 Prescription Management
 - 📱 Mobile App Support
-
----
-
-# 🔒 Security Features
-
-- Password Hashing using Bcrypt
-- JWT Authentication
-- Protected Routes
-- Secure API Handling
-- Environment Variable Protection
-
----
 
 # 🤝 Contributing
 
@@ -245,13 +234,9 @@ git push origin feature-name
 
 5. Open a Pull Request
 
----
-
 # 📄 License
 
 This project is licensed under the MIT License.
-
----
 
 # 👨‍💻 Author
 
@@ -262,8 +247,6 @@ This project is licensed under the MIT License.
 - GitHub: https://github.com/arman-ali24
 - LinkedIn: https://linkedin.com/in/your-linkedin
 
----
-
 # ⭐ Show Your Support
 
 If you like this project, give it a ⭐ on GitHub!
@@ -271,3 +254,5 @@ If you like this project, give it a ⭐ on GitHub!
 ## Repository Link
 
 https://github.com/arman-ali24/MediCare
+
+---
