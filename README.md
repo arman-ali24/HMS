@@ -2,6 +2,8 @@
   <h1>MediCare - Smart Hospital Solution🏥</h1>
 </div>
 
+# Live : [(Admin)](https://medicare-admin-qjn1.onrender.com) | [(Client)](https://medicare-frontend-r4fw.onrender.com)
+
 # Description
 A scalable healthcare management platform that streamlines appointments, patient workflows, healthcare services, and digital payments within a unified system. Built with role-based access control and modern architecture, it enables efficient healthcare operations through secure and intuitive user experiences.
 
