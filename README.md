@@ -247,7 +247,7 @@ This project is licensed under the MIT License.
 ### Connect With Me
 
 - GitHub: https://github.com/arman-ali24
-- LinkedIn: https://linkedin.com/in/your-linkedin
+- LinkedIn: https://linkedin.com/in/arman24
 
 # ⭐ Show Your Support
 
@@ -256,5 +256,3 @@ If you like this project, give it a ⭐ on GitHub!
 ## Repository Link
 
 https://github.com/arman-ali24/MediCare
-
----
